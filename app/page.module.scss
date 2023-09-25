@@ -16,7 +16,7 @@
   width: 100%;
   height: 100%;
   display: flex;
-  // justify-content: space-between;
+  justify-content: space-between;
   align-items: center;
   .left_container{
     padding: 80px;
@@ -36,8 +36,9 @@
     }
     .sign_up_google_cta, .sign_in_with_google_cta{
       display: flex;
-      padding: 16px 100px;
+      padding: 16px;
       align-items: flex-start;
+      justify-content: center;
       gap: 10px;
       border-radius: 4px;
       background: #1F813C;
@@ -47,6 +48,7 @@
       font-style: normal;
       font-weight: 700;
       line-height: normal;
+      align-self: stretch;
     }
     .sign_in_with_google_cta{
       background: transparent;
@@ -58,7 +60,7 @@
       align-items: center;
       gap: 10px;
       width: 100%;
-      padding: 0 60px;
+      // padding: 0 60px;
       color: #7A8792;
       font-family: 'Montserrat';
       font-size: 14px;
@@ -74,7 +76,7 @@
   .right_container{
     background: url('/hero_image.svg') transparent 50% / cover no-repeat;
     display: flex;
-    // justify-content: center;
+    justify-content: center;
     align-items: center;
     width: 415px;
     height: 412px;
@@ -219,4 +221,132 @@
       background: conic-gradient(from 0deg at 50% 50%, #57AE10 0deg, #1E8139 360deg);
     }
   }
+}
+.chat_container{
+  position: fixed;
+  right: 0;
+  top: 72px;
+  // bottom: 0;
+  display: flex;
+width: 400px;
+height: 917px;
+padding: 16px 18px;
+flex-direction: column;
+align-items: flex-start;
+gap: 9.405px;
+flex-shrink: 0;
+border-radius: 7.524px 0px 0px 7.524px;
+background: #1A1A1A;
+box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25);
+
+.chat_room{
+  display: flex;
+  padding: 3.762px 30.096px 11.286px 30.096px;
+  justify-content: center;
+  align-items: center;
+  gap: 7.524px;
+  color: rgba(255, 255, 255, 0.80);
+  font-family: Montserrat;
+  font-size: 15.048px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 100%;
+  }
+  .divider{
+    border: 0.47px solid;
+    background: radial-gradient(9169799.78% 66.26% at 50% 49.74%, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 100%);
+    width: 100%;
+  }
+  .navTab{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.90);
+    font-family: Montserrat;
+    font-size: 13.167px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    .navTab_item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+       padding: 8px;
+    }
+  }
+  .chats_container{
+   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9.405px;
+  align-self: stretch;
+  .chats{
+    display: flex;
+    width: 282px;
+    padding: 9.405px 13.167px;
+    justify-content: center;
+    align-items: center;
+    // gap: 9.405px;
+    border-radius: 5.643px;
+    background: linear-gradient(93deg, rgba(54, 54, 54, 0.50) 6.11%, rgba(44, 44, 44, 0.50) 98.79%);
+    box-shadow: 0px 3.76205px 3.76205px 0px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 13.167px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18.81px; /* 142.857% */
+  }
+  .sender{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 11.286px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11.286px;
+    padding: 4px 0;
+
+  }
+  }
+  .footer{
+    display: flex;
+    padding-bottom: 0px;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+    position: fixed;
+    bottom: 10px;
+    gap: 10px;
+    .input{
+      display: flex;
+      width: 314px;
+      padding: 10.346px 14.108px;
+      // justify-content: center;
+      align-items: center;
+      gap: 75.241px;
+      border-radius: 5.643px;
+      background: rgba(46, 46, 46, 0.70);
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 13.167px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18.81px; /* 142.857% */
+    }
+    .send_button{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #1EAF76;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
 }

@@ -9,7 +9,7 @@
     .top_container{
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        // align-items: center;
         width: 100%;
     }
     .listing{
@@ -35,6 +35,12 @@
             font-weight: 600;
             line-height: normal;
         }
+        .community{
+            display: flex;
+            gap: 8px;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
     .divider{
         border-bottom: 1px solid #656E78;
@@ -52,4 +58,12 @@
             padding-top: 16px;
         }
     }
+    .heading{
+            color: #CFD8DF;
+            font-family: Montserrat;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
 }

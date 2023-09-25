@@ -105,3 +105,16 @@ a {
     color-scheme: dark;
   }
 }
+
+.sidebar-main-open{
+  margin-left: 250px;
+  transition: margin-left 0.3s;
+}
+.sidebar-main-close{
+  margin-left: 50px;
+  transition: margin-left 0.3s;
+}
+.layout_container{
+  margin-top: 72px;
+}
+

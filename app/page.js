@@ -1,12 +1,35 @@
-
+'use client'
 import Image from 'next/image'
 import styles from './page.module.scss'
 import InfoCards from '@/components/games/game-info-cards';
 import { Table } from '@/components/table/table';
+import {SidebarContext} from './layout'
+import { useContext } from 'react';
 
-export default function Home() {
+const chats = [
+  {
+    key: 1,
+  },
+  {
+    key: 2,
+  },
+  {
+    key: 3,
+  },
+  {
+    key: 4,
+  },
+  {
+    key: 5,
+  },
+];
+
+export default function Home(props) {
+  const  showChat  = useContext(SidebarContext);
   return (
     <div className={styles.main}>
+      {console.log(showChat, "SidebarContext")}
+      {console.log(props, "---------------->")}
       <div className={styles.main_banner}>
         <div className={styles.left_container}>
           <div className={styles.heading}>Play Smarter</div>
@@ -62,13 +85,50 @@ export default function Home() {
             <div className={styles.divider}></div>
           </div>
           <div className={styles.right_container}>
-            <div>
-              <input placeholder="Feedback makes a better product. Write yours here…" />
-            </div>
+            <input placeholder="Feedback makes a better product. Write yours here…" />
             <button className={styles.sign_up_button}>Submit</button>
           </div>
         </div>
       </div>
+      {showChat.showChat &&
+      <div className={styles.chat_container}>
+        <div className={styles.chat_room}>Chat Room</div>
+        <div className={styles.divider}></div>
+        <div className={styles.navTab}>
+          <div className={styles.navTab_item}>
+            <Image src="/discussion.svg" width={23} height={23} alt="" />
+            Discussion
+          </div>
+          <div className={styles.navTab_item}>
+            <Image src="/live_chat.svg" width={23} height={23} alt="" />
+            live winners
+          </div>
+        </div>
+        <div className={styles.divider}></div>
+        <div className={styles.chats_container}>
+          {chats.map((item) => (
+            <div key={item.key}>
+              <div className={styles.chats}>
+                Hi, I am admin of this group. How can I help you?
+              </div>
+              <div className={styles.sender}>
+                <div>
+                  <Image src="avatar.svg" width={23} height={23} alt="user" />
+                </div>
+                <div>Parteek Garg</div>
+                <div>08:45 UTC</div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className={styles.footer}>
+          <div className={styles.input}>Message</div>
+          <div className={styles.send_button}>
+            <Image src="send_icon.svg" width={16} height={16} alt="user" />
+          </div>
+        </div>
+      </div>
+      }
     </div>
   );
 }

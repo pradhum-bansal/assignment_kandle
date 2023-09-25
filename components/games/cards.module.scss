@@ -11,17 +11,16 @@
         // justify-content: center;
         // align-items: center;
         flex-direction: column;
-        width: 600px;
+        width: 48%;
         gap: 15px;
         padding: 30px 0;
 
         .card_banner{
-            padding: 30px;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-radius: 4px;
-            background: linear-gradient(95deg, rgba(160, 134, 42, 0.75) -1.05%, rgba(183, 149, 35, 0.75) 39.99%, rgba(155, 130, 43, 0.75) 98.88%);
 
             .banner_title{
                 color: #FFF;
@@ -52,7 +51,7 @@
         }
         .cta_button{
             display: flex;
-            padding: 21px 175px;
+            padding: 21px;
             justify-content: center;
             align-items: center;
             gap: 10px;
@@ -68,7 +67,7 @@
 
             &:hover{
                 color: #fff;
-                background-color: rgba(160, 134, 42, 0.75);
+                background: linear-gradient(99deg, rgba(9, 85, 32, 0.90) 0%, rgba(14, 108, 42, 0.90) 50%, rgba(16, 73, 33, 0.90) 100%);
             }
         }
     }
