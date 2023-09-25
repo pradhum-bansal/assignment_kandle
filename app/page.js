@@ -28,8 +28,6 @@ export default function Home(props) {
   const  showChat  = useContext(SidebarContext);
   return (
     <div className={styles.main}>
-      {console.log(showChat, "SidebarContext")}
-      {console.log(props, "---------------->")}
       <div className={styles.main_banner}>
         <div className={styles.left_container}>
           <div className={styles.heading}>Play Smarter</div>

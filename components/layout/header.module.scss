@@ -67,3 +67,55 @@
     width: 100%;
     padding: 10px 100px;
 }
+@media only screen and (max-width: 768px){
+    .header_container_full{
+    width: calc(100% - 50px);
+    padding: 10px !important;
+    // justify-content: start !important;
+    .right_container{
+        gap: 8px;
+    }
+}
+.header_container{
+        left: 100%;
+}
+.sign_in_button{
+    padding: 8px !important;
+    font-size: 10px !important;
+}
+.sign_up_button{
+     padding: 8px !important;
+     font-size: 10px !important;
+}
+.language{
+    font-size: 12px !important;
+}
+.globe{
+    display: none !important;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+ .header_container_full{
+    width: calc(100% - 50px);
+    padding: 10px !important;
+    // justify-content: start !important;
+    .right_container{
+        gap: 8px;
+    }
+}
+.header_container{
+    left: auto;
+}
+.sign_in_button{
+    padding: 8px !important;
+    font-size: 10px !important;
+}
+.sign_up_button{
+     padding: 8px !important;
+     font-size: 10px !important;
+}
+.language{
+    font-size: 12px !important;
+}
+}

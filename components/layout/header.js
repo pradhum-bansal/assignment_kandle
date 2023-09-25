@@ -27,7 +27,7 @@ export default function Header({open, setShowChat, showChat}){
               alt="chat"
               onClick={() => setShowChat(!showChat)}
             />
-            <Image src="/globe.svg" width={24} height={24} alt="globe" />
+            <Image src="/globe.svg" width={24} height={24} alt="globe" className={styles.globe} />
             <span className={styles.divider}></span>
             <span className={styles.language}>Eng</span>
           </div>

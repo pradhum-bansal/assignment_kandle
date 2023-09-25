@@ -24,7 +24,7 @@ const montserrat = Montserrat({
 
 export default function RootLayout({ children }) {
 
-   const [isOpen, setIsOpen] = useState(true);
+   const [isOpen, setIsOpen] = useState(false);
    const [showChat, setShowChat] = useState(false);
   return (
     <html lang="en">
