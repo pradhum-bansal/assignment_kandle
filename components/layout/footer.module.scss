@@ -1,0 +1,55 @@
+.footer_container{
+    background: #1A1C20;
+    padding: 37px 51px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // align-items: center;
+    width: 100%;
+    .top_container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .listing{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 26px;
+        .heading{
+            color: #CFD8DF;
+            font-family: Montserrat;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        li{
+            list-style: none;
+            padding: 4px 0;
+            color: #7A8792;
+            font-family: Montserrat;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+    .divider{
+        border-bottom: 1px solid #656E78;
+        width: 100%;
+        margin: 32px 0;
+    }
+    .middle_container{
+        display: flex;
+        // justify-content: space-between;
+        flex-direction: column;
+
+        .coins_container{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 16px;
+        }
+    }
+}

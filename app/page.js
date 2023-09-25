@@ -1,95 +1,74 @@
+
 import Image from 'next/image'
-import styles from './page.module.css'
+import styles from './page.module.scss'
+import InfoCards from '@/components/games/game-info-cards';
+import { Table } from '@/components/table/table';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className={styles.main}>
+      <div className={styles.main_banner}>
+        <div className={styles.left_container}>
+          <div className={styles.heading}>Play Smarter</div>
+          <div className={styles.sign_up_google_cta}>Sign up with Google</div>
+          <div className={styles.divider_container}>
+            <div className={styles.divider}></div>
+            <span>OR</span>
+            <div className={styles.divider}></div>
+          </div>
+          <div className={styles.sign_in_with_google_cta}>
+            Sign in with Google
+          </div>
+        </div>
+        <div className={styles.right_container}></div>
+      </div>
+      <div className={styles.child_component}>
+        <div className={styles.component_heading}>Games on Kandle</div>
+        <InfoCards />
+      </div>
+      <div className={styles.child_component}>
+        <div className={styles.component_heading}>Games on Kandle</div>
+        <Table />
+      </div>
+      <div className={styles.child_component}>
+        <div className={styles.invite_banner}>
+          <div className={styles.left_container}>
+            <div className={styles.heading}>
+              Invite Friends, Win{" "}
+              <span className={styles.green_word}>Rewards</span>
+            </div>
+            <div className={styles.sign_up_button}>Sign Up</div>
+          </div>
+          <div className={styles.right_container}>
+            <Image src="/reward_banner.svg" height={260} width={370} />
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className={styles.child_component}>
+        <div className={styles.community_banner}>
+          <div className={styles.left_container}>
+            <div className={styles.heading}>Join Our Vibrant Community</div>
+            <div className={styles.image_container}>
+              <Image src="/twitter.svg" width={32} height={32} alt="twitter" />
+              <Image
+                src="/telegram.svg"
+                width={32}
+                height={32}
+                alt="telegram"
+              />
+            </div>
+          </div>
+          <div className={styles.middle_container}>
+            <div className={styles.divider}></div>
+          </div>
+          <div className={styles.right_container}>
+            <div>
+              <input placeholder="Feedback makes a better product. Write yours here…" />
+            </div>
+            <button className={styles.sign_up_button}>Submit</button>
+          </div>
+        </div>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }
